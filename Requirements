@@ -1,0 +1,730 @@
+Requirements
+By Clement Hoang and Pavan Jakhu
+Purpose
+The purpose of this program is to solve a triangle based on side lengths and angles specified by the user. The program does this using a systematic approach using trigonometry, saving a lot of time and error for the user. Once the triangle is solved, the program will display a menu of operation that the user can select from and perform.
+	In order to solve the triangle, the program repeatedly prompts the user for side/angle, the letter that denotes the quantity, and the value of the side/angle until a combination that allows the triangle to be constructed is met (The conditions being a total of 3 angles/side lengths with the exception of AAAS). Then, the program will present a variety of operations that the user can choose from including outputting the triangle specifications, outputting the area, and outputting the perimeter. There is also an option that allows the user to change their specifications. When an option is selected, the program will output the solution. These operations will be continually presented until the user chooses to enter a new triangle, or to terminate the program.
+Requirements List
+	The program shall prompt the user for angles and side lengths until one of the conditions are met (no restrictive menu)
+	The program shall require only a total of 3 angles/side lengths from user input with the exception of AAAS
+	The program should output a menu of options with a friendly user interface
+	The menu shall be repeatedly presented after an operation is completed
+	The program should be able to solve the triangle
+	The program should be able to calculate the perimeter
+	The program should be able to calculate the area
+	The program should be able to allow the user to enter new specifications
+	The program should be able to determine whether or not the triangle will be ambiguous, and solve for both cases (SSA and ASS)
+	The program should output an error message if no triangle can be formed
+	The program shall have error checks to ensure that a triangle is being constructed
+Measurable Goals and Test Cases
+Case 1: SAA
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): A
+Enter an angle (in degrees): 67
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): C
+Enter an angle (in degrees): 72
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): c
+Enter a side length (in units): 7
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 1
+
+Angle A = 67 degrees
+Angle B = 41 degrees
+Angle C = 72 degrees
+Side a = 6.8 units
+Side b = 4.8 units
+Side c = 7 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 2
+
+Perimeter = 18.6 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 3
+
+Area = 15.6 units2
+
+Case 2: AAS
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): b
+Enter a side length (in units): 16
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): B
+Enter an angle (in degrees): 59
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): C
+Enter an angle (in degrees): 76
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 1
+
+Angle A = 45 degrees
+Angle B = 59 degrees
+Angle C = 76 degrees
+Side a = 13.2 units
+Side b = 16 units
+Side c = 18.1 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 2
+
+Perimeter = 47.3 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 3
+
+Area = 102.5 units2
+
+Case 3: ASA
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): B
+Enter an angle (in degrees): 59
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 13
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): C
+Enter an angle (in degrees): 43
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 1
+
+Angle A = 78 degrees
+Angle B = 59 degrees
+Angle C = 43 degrees
+Side a = 13 units
+Side b = 11.4 units
+Side c = 9.1 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 2
+
+Perimeter = 33.5 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 3
+
+Area = 50.5 units2
+
+Case 4: SAS
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 18
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): B
+Enter an angle (in degrees): 49
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): c
+Enter a side length (in units): 4
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 1
+
+Angle A = 120 degrees
+Angle B = 49 degrees
+Angle C = 11 degrees
+Side a = 18 units
+Side b = 15.7 units
+Side c = 4 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 2
+
+Perimeter = 37.7 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 3
+
+Area = 27.2 units2
+
+Case 5: SSA with 1 solution
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 20
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): c
+Enter a side length (in units): 16
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): A
+Enter an angle (in degrees): 30
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 1
+
+Angle A = 30 degrees
+Angle B = 126 degrees
+Angle C = 24 degrees
+Side a = 20 units
+Side b = 32.2 units
+Side c = 16 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 2
+
+Perimeter = 68.4 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 3
+
+Area = 128.7 units2
+
+Case 6: SSA with 2 solutions
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 10
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): b
+Enter a side length (in units): 16
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): A
+Enter an angle (in degrees): 30
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 1
+
+Solution 1
+Angle A = 30 degrees
+Angle B = 53 degrees
+Angle C = 97 degrees
+Side a = 10 units
+Side b = 16 units
+Side c = 19.9 units
+
+Solution 2
+Angle A = 30 degrees
+Angle B = 127 degrees
+Angle C = 23 degrees
+Side a = 10 units
+Side b = 16 units
+Side c = 7.9 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 2
+
+Solution 1
+Perimeter = 45.9 units
+
+Solution 2
+Perimeter = 33.9 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 3
+
+Solution 1
+Area = 79.4 units2
+
+Solution 2
+Area = 31.4 units2
+
+Case 7: ASS
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): B
+Enter an angle (in degrees): 27
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 4
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): b
+Enter a side length (in units): 6
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 1
+
+Angle A = 18 degrees
+Angle B = 27 degrees
+Angle C = 135 degrees
+Side a = 4 units
+Side b = 6 units
+Side c = 9.3 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 2
+
+Perimeter = 19.3 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 3
+
+Area = 8.4 units2
+
+Case 8: SSS
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): c
+Enter a side length (in units): 3
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 10.3
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): b
+Enter a side length (in units): 12.6
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 1
+
+Angle A = 35 degrees
+Angle B = 135 degrees
+Angle C = 10 degrees
+Side a = 10.3 units
+Side b = 12.6 units
+Side c = 3 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 2
+
+Perimeter = 25.9 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 3
+
+Area = 10.9 units2
+
+Case 9: SSS (1 side longer than or equal to sum of other 2)
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 17
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): b
+Enter a side length (in units): 10
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): c
+Enter a side length (in units): 7
+
+A triangle cannot be constructed based on these specifications.
+
+Restarting Program.
+
+1 – Side
+2 – Angle
+Select an option:
+
+Case 10: Right Angle Triangle
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 7
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): c
+Enter a side length (in units): 3
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): B
+Enter an angle (in degrees): 90
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 1
+
+Angle A = 67 degrees
+Angle B = 90 degrees
+Angle C = 23 degrees
+Side a = 7 units
+Side b = 7.6 units
+Side c = 3 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 2
+
+Perimeter = 17.6 units
+
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option: 3
+
+Area = 10.5 units2
+
+Case 11: ASA with 2 Angles that are 90 degrees
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 7
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): C
+Enter an angle (in degrees): 90
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): B
+Enter an angle (in degrees): 90
+
+A triangle cannot be constructed based on these specifications.
+
+Restarting Program.
+
+1 – Side
+2 – Angle
+Select an option:
+
+
+Case 12: ASA with 2 Obtuse Angles
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 8
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): C
+Enter an angle (in degrees): 96
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): B
+Enter an angle (in degrees): 132
+
+A triangle cannot be constructed based on these specifications.
+
+Restarting Program.
+
+1 – Side
+2 – Angle
+Select an option:
+
+Case 13: Negative Sides and Angles Out of Range
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): -5
+
+Error!
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): C
+Enter an angle (in degrees): 185
+
+Error!
+1 – Side
+2 – Angle
+Select an option:
+
+Case 14: SSA with no solution
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): a
+Enter a side length (in units): 7
+
+1 – Side
+2 – Angle
+Select an option: 1
+Enter side (a, b, or c): c
+Enter a side length (in units): 16
+
+1 – Side
+2 – Angle
+Select an option: 2
+Enter angle (A, B, or C): A
+Enter an angle (in degrees): 30
+
+A triangle cannot be constructed based on these specifications.
+
+Restarting Program.
+
+1 – Side
+2 – Angle
+Select an option:
+
+
+
+User Interface
+1.	The program will prompt the user to enter whether they want to enter a side or an angle.
+1 – Side
+2 – Angle
+Select an option: 
+2.	The program will prompt the user to enter a side letter or an angle letter that corresponds to the quantity that they want to input, depending on what was entered in Step 1.
+Case 1:
+	Enter side (a, b, or c):
+Case 2:
+	Enter angle (A, B, or C):
+3.	The program will prompt the user to enter a side length or an angle value, depending on what was entered in Step 1.
+Case 1:
+	Enter a side length (in units):
+Case 2:
+	Enter an angle (in degrees):
+4.	Steps 1-3 will repeat until enough information is input.
+5.	A menu will be displayed, and the user is prompted for an option.
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option:
+	If option 1 is selected:
+Angle A = <A> degrees
+Angle B = <B> degrees
+Angle C = <C> degrees
+Side a = <a> units
+Side b = <b> units
+Side c = <c> units
+	If option 2 is selected:
+Perimeter = <perimeter> units
+	If option 3 is selected:
+Area = <area> units^2
+	If option 4 is selected, the program will return to step 1.
+Prototypes and Mock-ups
+Please use the following diagram as reference as you progress through the steps:
+
+
+
+Stage 1: Gathering Information
+In order to solve the triangle, a combination of SSS, SAS, ASA, ASS, SSA, AAS, or SAA must be achieved. Then, the program will continually prompt the user for:
+1) Side or angle?
+1 – Side
+2 – Angle
+Select an option: 
+2) Which side/angle?
+Case 1:
+	Enter side (a, b, or c):
+Case 2:
+	Enter angle (A, B, or C):
+3) The side length/angle?
+Case 1:
+	Enter a side length (in units):
+Case 2:
+	Enter an angle (in degrees):
+The program will store the values entered by the user into their respective variables in the main program, until one of the conditions is fulfilled. A simple error check also occurs at each step to prevent the same letter (A, B, C, a, b, or c) being modified after a value is already set, and to ensure that the numbers make sense, prompting again for values should it fail the check. Once one of the conditions is fulfilled, one final error check will occur in order to make sure that the triangle can be constructed. If a triangle cannot be constructed, then the program will display an error message and restart.
+Stage 2: Solving the Triangle
+	The program shall construct a triangle according to the user specifications and a value of -1 for the values that are unknown. Then, the program will use different instance methods, depending on the situation, to solve the triangle.  
+	Case 1: AAS
+	The program will determine angle 3 by subtracting angle 1 and angle 2 from 180.
+	Then, the program will determine the other 2 sides by using the sine law twice.
+	The program will then set the instance fields in the object to the solved values.
+	Case 2: ASA
+	The program will determine angle 3 by subtracting angle 1 and angle 2 from 180.
+	Then, the program will determine the other 2 sides by using the sine law twice.
+	The program will then set the instance fields in the object to the solved values.
+	Case 3: SAS
+	The program will calculate the third side by using the cosine law. 
+Then, the program will use the sine law to calculate the second angle. 
+Then the program will subtract angle 1 and angle 2 from 180 to determine angle 3.
+The program will then set the instance fields in the object to the solved values.
+Case 4: SSA
+The program will calculate angle 2 with the sine law.
+Then, the program will subtract angle 1 and angle 2 from 180 to determine angle 3.
+Then, the program will use sine law to find side 3.
+Since SSA can represent 2 triangles, the program will now do the following:
+The program will calculate ALTERNATE angle 2 with by taking the difference of 180 subtract the value acquired from the sine law.
+Then, the program will check if angle 2 + angle 1 < 180. If it is, this operation will stop.
+Else, the program will subtract angle 1 and ALTERNATE angle 2 from 180 to determine ALTERNATE angle 3.
+Then, the program will use sine law to find ALTERNATE side 3.
+The program will then set the instance fields in the object to the solved values.
+Case 5: SSS
+The program will use cosine law to calculate angle 1.
+The program will use cosine law to calculate angle 2.
+The program will subtract angle 1 and angle 2 from 180 to determine angle 3.
+The program will then set the instance fields in the object to the solved values.
+Case 6: AAAS
+The program will eliminate 1 angle from the given specifications.
+Then the program will run as if it is case 1: AAS.
+
+Stage 3: User Commands
+The following menu will be displayed to the user, and depending on the option entered, a different method is executed.
+1 – Return specifications
+2 – Output perimeter
+3 – Output area
+4 – Change attributes
+Select an option:
+Case 1:
+The following will be output, directly from the instance fields in the triangle object. If the triangle is an ambiguous case, then the alternate quantities are also output.
+Angle A = <A> degrees
+Angle B = <B> degrees
+Angle C = <C> degrees
+Side a = <a> units
+Side b = <b> units
+Side c = <c> units
+Case 2:
+The program will calculate the perimeter with the following formula:
+Perimeter = side 1 + side 2 + side 3
+Then, the program will output the following:
+Perimeter = <perimeter> units
+Case 3:
+The program will calculate the height of the triangle.
+Then, the program will calculate the area of the triangle using the following formula:
+Area = Math.sqrt(s*(s-a)*(s-b)*(s-c)) 
+Where s = (a+b+c)/2
+Then, the program will output the following:
+Area = <area> units^2
+Case 4:
+The program will simply loop back to the beginning of the program.
+Quality Standards and Constraints
+	When prompting for angle, the program shall continue to prompt for an angle until 1 < θ < 179. (because angles are in an integer data type, and angles not within this range result in an impossible triangle)
+	When prompting for side length, the program shall continue to prompt for a side length until it is positive.
+	When enough data is given, the program will perform a check that ensures that the triangle is possible to construct:
+o	If 2 or more angles are entered, the program will check to ensure that no two angles are 90 degrees and no two angles are obtuse
+o	If 3 sides are entered, the program will check to ensure that the sum of any 2 sides is greater than the 3rd side
+o	When using the sine law, the value is within the range -1 to 1 (SSA with no solution)
+Questions
+1)	The user can enter information in 8 different ways – (AAS, SAA, ASS, SSA, ASA, SAS, SSS, and AAAS). Since our user interface is very flexible ( allows the user to choose what to enter, then to enter it), all possible combinations of 3 angles/side lengths can be entered by the user. During the stage of user input, the program will check for errors and have certain restrictions. For example, sides cannot be modified after a value is input into them.
+2)	Instance fields for the sides and angles of the triangle, the area of the triangle and the perimeter of the triangle should be created. Additionally, fields that represent the alternate solution of the triangle (in an ambiguous case) should be created, if we want to handle the ambiguous case by providing the user 2 solutions. The fields should be set to private so the user or a different programmer cannot manipulate the fields in ways that we do not want them to. In order to access these encapsulated fields, we use accessor and mutator methods which are defined in the object. Furthermore, there can be more instance fields – for example an instance field that specifies the amount of solutions the triangle has would be an asset to code simplicity when handling the ambiguous case.
+3)	We will need one constructor method in order to build the triangle. The constructor will have the parameters (A, B, C, a, b, c) to represent the angles and side lengths of the triangle (-1 if no value specified in the user input).
+4)	Instance methods should be created to calculate perimeter, to calculate area, and to solve the triangle. Several instance methods will be used to solve the triangle (different parameters via overloading) depending on the combination of specifications provided by user input.
+5)	Error checking should be done with instance methods instead of in the main program because error checking is based on the instance fields of the object and not based on the overall program. In this case, the error checks are specific to the triangle object only, and not for general purpose use in the main program, therefore, it should be done in the instance method.
+
